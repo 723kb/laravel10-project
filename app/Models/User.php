@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // 1人のユーザーが複数の投稿を持つためのリレーション設定 複数の投稿なのでposts
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
 }

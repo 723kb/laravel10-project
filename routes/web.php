@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+// この2行でCRUDに必要な7個のルート設定ができる
+use App\Http\Controllers\PostController;
+Route::resource('post', PostController::class);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
